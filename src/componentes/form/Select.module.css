@@ -1,0 +1,15 @@
+.label {
+  display: flex;
+  color: black;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+.select {
+  background-color: #363636;
+  margin: 10px;
+  color: #32cd32;
+  border-color: black;
+  outline: none;
+  border-radius: 10px;
+}

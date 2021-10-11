@@ -1,0 +1,21 @@
+.divBut {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 50px;
+  width: 100px;
+  color: white;
+  background-color: #363636;
+  margin-top: 20px;
+  border-radius: 7px;
+  -webkit-box-shadow: 5px 3px 15px 2px #000000;
+  box-shadow: 5px 3px 15px 2px #000000;
+}
+@media (max-width: 480px) {
+  .divBut {
+    width: 300px;
+    height: 40px;
+    align-items: center;
+    margin-left: 0px;
+  }
+}

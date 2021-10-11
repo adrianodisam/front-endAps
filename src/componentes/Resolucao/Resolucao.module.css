@@ -1,0 +1,14 @@
+.Resolucao {
+  width: 600px;
+  height: 350px;
+  margin: 20px;
+  -webkit-box-shadow: 5px 3px 15px 2px #000000;
+  box-shadow: 5px 3px 15px 2px #000000;
+}
+@media (max-width: 480px) {
+  .Resolucao {
+    margin: 10px auto;
+    width: 250px;
+    height: 100%;
+  }
+}

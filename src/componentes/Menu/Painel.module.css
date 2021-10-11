@@ -1,0 +1,27 @@
+.Painel {
+  display: flex;
+  background-color: #363636;
+  color: white;
+  width: 200px;
+  margin: 10px;
+  font-size: 12px;
+
+  align-items: center;
+  border-radius: 20px 0px 20px 0px;
+  -webkit-box-shadow: 5px 3px 15px 2px #000000;
+  box-shadow: 5px 3px 15px 2px #000000;
+}
+.Texto {
+  margin: 30px;
+}
+
+@media (max-width: 480px) {
+  .Painel {
+    margin: 10px auto;
+    width: 250px;
+    height: 100px;
+  }
+  .Texto {
+    margin: 50px;
+  }
+}
