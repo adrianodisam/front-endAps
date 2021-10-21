@@ -1,23 +1,38 @@
 import React from 'react';
-import Style from './Input.module.css';
+
 const Input = (props) => {
-  const [nome, setNome] = React.useState('');
+  const [nomes, setNome] = React.useState('');
+  const [email, setEmail] = React.useState('');
+  const [cidade, setCidade] = React.useState('');
+  const [ID, setID] = React.useState(null);
+
+  const sendDataApi = () => {
+    fetch.post(`http://localhost:8080/denuncia/${ID}`, {
+      Cidade,
+      nome,
+      Email,
+    });
+  };
+  React.useEffect(() => {
+    setNome(localStorage.getItem('nome'));
+    setEmail(localStorage.getItem('Email'));
+    setCidade(localStorage.getItem('Cidade'));
+    setID(localStorage.getItem('ID'));
+  }, []);
   return (
-    <form action="" className={Style.form}>
-      <label className={Style.label} htmlFor="">
-        {props.label}
-      </label>
-      <div className={Style.divInput}>
-        <input
-          className={Style.input}
-          type="text"
-          id={props.id}
-          placeholder={props.placeholder}
-          value={nome}
-          onChange={(event) => setNome(event.target.value)}
-        />
-      </div>
-    </form>
+    <div>
+      <form>
+        <label htmlFor="">Nome</label>
+        <input type="text" value={nomes} onChange={(e) => e.target.value} />
+        <label htmlFor="">Email</label>
+        <input type="text" value={email} o onChange={(e) => e.target.value} />
+        <label htmlFor="">Cidade</label>
+        <input type="text" value={cidade} onChange={(e) => e.target.value} />
+        <button type="submit" onClick={sendDataApi}>
+          atualizar
+        </button>
+      </form>
+    </div>
   );
 };
 

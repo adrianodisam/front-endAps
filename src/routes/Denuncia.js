@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { Form } from '../componentes/formulario/Form';
 import Botao from '../componentes/Menu/Botao';
-import Modal from '../componentes/modal/Modal';
 
 const Denuncia = () => {
   return (
@@ -9,7 +9,7 @@ const Denuncia = () => {
       <Link to="/">
         <Botao nome="Voltar" />
       </Link>
-      <Modal />
+      <Form />
     </div>
   );
 };

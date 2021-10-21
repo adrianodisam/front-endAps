@@ -1,6 +1,5 @@
 .Resolucao {
-  width: 600px;
-  height: 350px;
+  max-width: 900px;
   margin: 20px;
   -webkit-box-shadow: 5px 3px 15px 2px #000000;
   box-shadow: 5px 3px 15px 2px #000000;
