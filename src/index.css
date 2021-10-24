@@ -1,10 +1,11 @@
 * {
   margin: 0px;
   padding: 0px;
+  box-sizing: border-box;
 }
 body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #363636;
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box;
 }

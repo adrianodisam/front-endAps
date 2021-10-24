@@ -1,46 +1,41 @@
 import React from 'react';
 import Style from './Form.module.css';
+import { Redirect } from 'react-router-dom';
 const formFilds = [
   {
-    id: 'Nome',
-    label: 'Nome',
+    id: 'nome',
+    label: 'nome',
     type: 'text',
   },
   {
-    id: 'Email',
-    label: 'Email',
+    id: 'email',
+    label: 'email',
     type: 'email',
   },
   {
-    id: 'Cidade',
-    label: 'Cidade',
+    id: 'cidade',
+    label: 'cidade',
     type: 'text',
   },
   {
-    id: 'Rua',
-    label: 'Rua',
+    id: 'rua',
+    label: 'rua',
     type: 'text',
   },
   {
-    id: 'Problema',
-    label: 'Problema',
+    id: 'problema',
+    label: 'problema',
     type: 'text',
   },
   {
-    id: 'Descrição',
+    id: 'descricao',
     label: 'Descrição',
     type: 'textarea',
   },
 ];
 
 export const Form = () => {
-  const [form, setForm] = React.useState({
-    Cidade: '',
-    Rua: '',
-    Problema: '',
-    Nome: '',
-    Email: '',
-  });
+  const [form, setForm] = React.useState({});
   const [response, setResponse] = React.useState(null);
   function handlechange({ target }) {
     const { id, value } = target;
@@ -74,8 +69,8 @@ export const Form = () => {
           />
         </div>
       ))}
-      {response && response.ok && <p>Denúncia enviada</p>}
-      <button>Enviar</button>
+      {response && response.ok && <p>Enviado com sucesso</p>}
+      <Redirect to="/Resolver" />;<button>Enviar</button>
     </form>
   );
 };

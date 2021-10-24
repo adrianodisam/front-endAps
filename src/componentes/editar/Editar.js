@@ -1,4 +1,39 @@
 import React from 'react';
+import Style from './Editar.module.css';
+import { Link } from 'react-router-dom';
+import Botao from '../Menu/Botao';
+const formFilds = [
+  {
+    id: 'nome',
+    label: 'nome',
+    type: 'text',
+  },
+  {
+    id: 'email',
+    label: 'email',
+    type: 'email',
+  },
+  {
+    id: 'cidade',
+    label: 'cidade',
+    type: 'text',
+  },
+  {
+    id: 'rua',
+    label: 'rua',
+    type: 'text',
+  },
+  {
+    id: 'problema',
+    label: 'problema',
+    type: 'text',
+  },
+  {
+    id: 'descricao',
+    label: 'Descrição',
+    type: 'textarea',
+  },
+];
 
 export const Editar = () => {
   let [editar, setEditar] = React.useState(null);
@@ -6,7 +41,6 @@ export const Editar = () => {
     function configObjeto(json) {
       const index = json[0];
       setEditar(index);
-      console.log(editar);
     }
     fetch('http://localhost:8080/api/denuncias')
       .then((resolve) => resolve.json())
@@ -20,23 +54,28 @@ export const Editar = () => {
 
   if (editar === null) return null;
   return (
-    <div>
-      <form>
-        <label htmlFor="">Nome</label>
-        <input
-          id="Nome"
-          type="text"
-          value={editar.Nome}
-          onChange={handleChange}
-        />
-        <label htmlFor="">Email</label>
-        <input
-          id="Email"
-          value={editar.Email}
-          type="text"
-          onChange={handleChange}
-        />
+    <>
+      <Link to="/">
+        <Botao nome="Home" />
+      </Link>
+      <form className={Style.form}>
+        {formFilds.map(({ id, label, type }) => (
+          <div key={id}>
+            <label className={Style.formLabel} htmlFor={id}>
+              {label}
+            </label>
+
+            <input
+              className={Style.inputForm}
+              type={type}
+              id={id}
+              value={editar[id]}
+              onChange={handleChange}
+            />
+          </div>
+        ))}
+        <button>Editar</button>
       </form>
-    </div>
+    </>
   );
 };

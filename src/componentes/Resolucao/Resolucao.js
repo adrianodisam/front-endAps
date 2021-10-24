@@ -1,5 +1,6 @@
 import React from 'react';
 import { ListaItem } from '../ListaItem/ListaItem';
+import { Link } from 'react-router-dom';
 
 import Style from './Resolucao.module.css';
 
@@ -10,23 +11,22 @@ const Resolucao = () => {
       .then((resolve) => resolve.json())
       .then((json) => setResolve(json));
   }, []);
-  console.log(resolve);
-  if (resolve === null) return null;
-  let array = ['1,', '2', '3'];
-  array.map(function (value, index) {});
+
+  if (resolve === null) return <h2>Vazio</h2>;
   return (
     <div className={Style.Resolucao}>
       {resolve.map(
-        ({ Nome, Email, id, Cidade, Rua, Problema, Descricao }, index) => (
+        ({ nome, email, id, cidade, rua, problema, descricao }, index) => (
           <ListaItem
-            nome={Nome}
-            email={Email}
-            cidade={Cidade}
-            rua={Rua}
-            problema={Problema}
-            descricao={Descricao}
+            nome={nome}
+            email={email}
+            cidade={cidade}
+            rua={rua}
+            problema={problema}
+            descricao={descricao}
             index={index + 1}
             id={id}
+            key={id}
           />
         ),
       )}
