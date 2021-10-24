@@ -38,6 +38,8 @@ export const Form = () => {
     Cidade: '',
     Rua: '',
     Problema: '',
+    Nome: '',
+    Email: '',
   });
   const [response, setResponse] = React.useState(null);
   function handlechange({ target }) {

@@ -5,6 +5,7 @@ import Home from '../../routes/Home';
 import Denuncia from '../../routes/Denuncia';
 import Resolver from '../../routes/Resolver';
 import Nenhuma from '../../routes/Nenhuma';
+import { Editar } from '../editar/Editar';
 
 const Container = () => {
   return (
@@ -13,6 +14,7 @@ const Container = () => {
         <Switch>
           <Route exact path="/">
             <Home />
+            <Editar />
           </Route>
           <Route exact path="/denuncia">
             <Denuncia />

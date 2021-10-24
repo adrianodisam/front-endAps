@@ -6,13 +6,6 @@ const Input = (props) => {
   const [cidade, setCidade] = React.useState('');
   const [ID, setID] = React.useState(null);
 
-  const sendDataApi = () => {
-    fetch.post(`http://localhost:8080/denuncia/${ID}`, {
-      Cidade,
-      nome,
-      Email,
-    });
-  };
   React.useEffect(() => {
     setNome(localStorage.getItem('nome'));
     setEmail(localStorage.getItem('Email'));
@@ -23,14 +16,12 @@ const Input = (props) => {
     <div>
       <form>
         <label htmlFor="">Nome</label>
-        <input type="text" value={nomes} onChange={(e) => e.target.value} />
+        <input type="text" onChange={(e) => e.target.value} />
         <label htmlFor="">Email</label>
-        <input type="text" value={email} o onChange={(e) => e.target.value} />
+        <input type="text" o onChange={(e) => e.target.value} />
         <label htmlFor="">Cidade</label>
-        <input type="text" value={cidade} onChange={(e) => e.target.value} />
-        <button type="submit" onClick={sendDataApi}>
-          atualizar
-        </button>
+        <input type="text" onChange={(e) => e.target.value} />
+        <button type="submit">atualizar</button>
       </form>
     </div>
   );

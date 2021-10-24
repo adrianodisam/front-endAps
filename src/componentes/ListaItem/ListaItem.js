@@ -22,13 +22,13 @@ export const ListaItem = (props) => {
         </thead>
         <tbody>
           <tr>
-            <th scope="row">{props.index}</th>
+            <td style={{ display: 'none' }}>{props.id}</td>
+            <td>{props.index}</td>
             <td>{props.nome}</td>
             <td>{props.email}</td>
             <td>{props.problema}</td>
             <td>{props.cidade}</td>
             <td>{props.rua}</td>
-
             <td>{props.descricao}</td>
             <td>
               <Alerta />
