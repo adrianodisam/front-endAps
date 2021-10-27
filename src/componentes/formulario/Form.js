@@ -69,8 +69,8 @@ export const Form = () => {
           />
         </div>
       ))}
-      {response && response.ok && <p>Enviado com sucesso</p>}
-      <Redirect to="/Resolver" />;<button>Enviar</button>
+      {response && response.ok && <Redirect to="/Resolver" />}
+      <button>Enviar</button>
     </form>
   );
 };
