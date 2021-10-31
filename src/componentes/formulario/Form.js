@@ -13,11 +13,6 @@ const formFilds = [
     type: 'email',
   },
   {
-    id: 'cidade',
-    label: 'cidade',
-    type: 'text',
-  },
-  {
     id: 'rua',
     label: 'rua',
     type: 'text',
@@ -25,6 +20,11 @@ const formFilds = [
   {
     id: 'problema',
     label: 'problema',
+    type: 'text',
+  },
+  {
+    id: 'cidade',
+    label: 'cidade',
     type: 'text',
   },
   {

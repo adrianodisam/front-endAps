@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #363636;
+  background: #006400;
+  background: -moz-linear-gradient(top, #006400 0%, #00ff00 100%);
+  background: -webkit-linear-gradient(top, #006400 0%, #00ff00 100%);
+  background: linear-gradient(to bottom, #006400 0%, #00ff00 100%);
 }

@@ -1,6 +1,8 @@
 .Resolucao {
-  max-width: 900px;
-  margin: 20px;
+  width: 100vh;
+  display: inline-block;
+
+  background-color: #000000;
   -webkit-box-shadow: 5px 3px 15px 2px #000000;
   box-shadow: 5px 3px 15px 2px #000000;
 }

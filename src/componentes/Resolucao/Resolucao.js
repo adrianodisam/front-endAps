@@ -1,8 +1,6 @@
 import React from 'react';
-import { ListaItem } from '../ListaItem/ListaItem';
-import { Link } from 'react-router-dom';
-
 import Style from './Resolucao.module.css';
+import Card from '../Cards/Card';
 
 const Resolucao = () => {
   const [resolve, setResolve] = React.useState(null);
@@ -15,21 +13,7 @@ const Resolucao = () => {
   if (resolve === null) return <h2>Vazio</h2>;
   return (
     <div className={Style.Resolucao}>
-      {resolve.map(
-        ({ nome, email, id, cidade, rua, problema, descricao }, index) => (
-          <ListaItem
-            nome={nome}
-            email={email}
-            cidade={cidade}
-            rua={rua}
-            problema={problema}
-            descricao={descricao}
-            index={index + 1}
-            id={id}
-            key={id}
-          />
-        ),
-      )}
+      <Card />
     </div>
   );
 };

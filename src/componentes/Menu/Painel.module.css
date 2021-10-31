@@ -1,18 +1,19 @@
 .Painel {
   display: flex;
-  background-color: #363636;
+  background-color: #556b2f;
   color: white;
   width: 200px;
   margin: 10px;
   font-size: 12px;
-
+  animation: interacao 2s forwards;
   align-items: center;
   border-radius: 20px 0px 20px 0px;
   -webkit-box-shadow: 5px 3px 15px 2px #000000;
   box-shadow: 5px 3px 15px 2px #000000;
 }
 .Texto {
-  margin: 30px;
+  width: 100px;
+  color: white;
 }
 
 @media (max-width: 480px) {
@@ -23,5 +24,19 @@
   }
   .Texto {
     margin: 50px;
+  }
+}
+
+@keyframes interacao {
+  0% {
+    opacity: 0;
+    transform: scale(1) rotateZ(0);
+  }
+  50% {
+    transform: scale(2) rotateZ(180deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.3) r(360deg);
   }
 }
