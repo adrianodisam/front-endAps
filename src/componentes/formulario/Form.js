@@ -70,7 +70,12 @@ export const Form = () => {
         </div>
       ))}
       {response && response.ok && <Redirect to="/Resolver" />}
-      <button>Enviar</button>
+      <button
+        className="btn btn-lightbg-success
+        text-dark col-6"
+      >
+        Enviar
+      </button>
     </form>
   );
 };

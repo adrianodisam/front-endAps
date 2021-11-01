@@ -1,11 +1,10 @@
 .header {
   display: flex;
   justify-content: center;
+  background-color: #90ee90;
   padding: 20px;
   width: 100%;
   align-items: center;
-  -webkit-box-shadow: 5px 3px 15px 2px #000000;
-  box-shadow: 5px 3px 15px 2px #000000;
 }
 
 @media (max-width: 480px) {

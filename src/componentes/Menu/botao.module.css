@@ -1,15 +1,10 @@
-.divBut {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 50px;
-  width: 100px;
-  color: white;
-  background-color: #556b2f;
-  margin-top: 20px;
-  border-radius: 7px;
-  -webkit-box-shadow: 5px 3px 15px 2px #000000;
-  box-shadow: 5px 3px 15px 2px #000000;
+.divBut button {
+  display: inline-block;
+  position: relative;
+  left: 20%;
+  border: solid 1px #90ee90;
+  font-weight: bolder;
+  margin-top: 1px;
 }
 @media (max-width: 480px) {
   .divBut {

@@ -9,7 +9,7 @@ const Home = () => {
       <Painel valor="ooo" nome="Resolvidos" />
       <Painel valor="ooo" nome="Denúncias" />
       <Link to="/Denuncia">
-        <Botao nome="Denunciar" />
+        <Botao nome="Reportar" />
       </Link>
       <Link to="/Resolver">
         <Botao nome="Resolver" />

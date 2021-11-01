@@ -6,6 +6,7 @@ import Denuncia from '../../routes/Denuncia';
 import Resolver from '../../routes/Resolver';
 import Nenhuma from '../../routes/Nenhuma';
 import EditarDenuncia from '../../routes/EditarDenuncia';
+import Resolvido from '../../routes/Resolvido';
 
 const Container = () => {
   return (
@@ -15,12 +16,15 @@ const Container = () => {
           <Route exact path="/">
             <Home />
           </Route>
+
           <Route exact path="/Editar">
             <EditarDenuncia />
           </Route>
           <Route exact path="/denuncia">
             <Denuncia />
           </Route>
+
+          <Route exact path="/Agradecimento" component={Resolvido} />
           <Route exact path="/resolver">
             <Resolver />
           </Route>

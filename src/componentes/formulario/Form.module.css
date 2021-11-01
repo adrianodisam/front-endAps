@@ -5,6 +5,17 @@
   flex-direction: column;
   color: whitesmoke;
 }
+.formForm button {
+  border: solid 1px #90ee90;
+  margin-top: 2px;
+}
+form {
+  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  border: solid 1px #90ee90;
+  padding: 20px;
+  border-radius: 7%;
+  margin-top: 4px;
+}
 .formLabel {
   display: flex;
 
@@ -12,6 +23,28 @@
   color: black;
   font-weight: bolder;
 }
-.inputForm {
-  margin: 2px;
+
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }
