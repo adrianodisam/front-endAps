@@ -1,17 +1,16 @@
-.header {
+.Footer {
   display: flex;
   justify-content: center;
   background-color: #3cb371;
-  padding: 20px;
+  color: white;
+  margin-top: 10px;
+  height: 6rem;
+
   width: 100%;
   align-items: center;
 }
-
 @media (max-width: 480px) {
-  .header {
-    align-items: center;
+  .Footer {
+    height: 5.4rem;
   }
-}
-li {
-  list-style: none;
 }

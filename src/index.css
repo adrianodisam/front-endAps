@@ -5,4 +5,102 @@
 }
 body {
   background-color: white;
+  color: gray;
+}
+.Butao {
+  display: inline-block;
+  position: relative;
+  left: 20%;
+  border: solid 1px #90ee90;
+  font-weight: bolder;
+  transition: 0.4s;
+  margin-top: 1rem;
+  border-radius: 10px;
+  box-shadow: 5px 3px 15px 2px #90ee90;
+}
+.Butao:hover {
+  color: white;
+  background-color: #90ee90;
+}
+
+.Svg {
+  width: 60px;
+  margin: 0.4rem;
+
+  animation: pulse 10s infinite both;
+}
+.Svg:hover {
+  box-shadow: 5px 3px 15px 2px #90ee90;
+  border-radius: 60%;
+}
+.card {
+  animation: text-focus-in 3s both;
+}
+.menu {
+  background-color: white;
+  border: solid 1px #90ee90;
+  color: #3cb371;
+  padding: 10px;
+  width: 6rem;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: 0.3s;
+  box-shadow: 5px 3px 15px 2px #90ee90;
+}
+.menu:hover {
+  background-color: #90ee90;
+  color: white;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@keyframes pulse {
+  0% {
+    -webkit-transform: scale3d(1, 5, 5);
+    transform: scale3d(1.2, 1.2, 1.2);
+  }
+  50% {
+    -webkit-transform: scale3d(1.05, 1.05, 1.05);
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+@-webkit-keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
+}
+@keyframes text-focus-in {
+  0% {
+    -webkit-filter: blur(12px);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-filter: blur(0px);
+    filter: blur(0px);
+    opacity: 1;
+  }
 }

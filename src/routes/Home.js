@@ -5,9 +5,13 @@ import Painel from '../componentes/Menu/Painel';
 
 const Home = () => {
   return (
-    <div>
-      <Painel valor="ooo" nome="Resolvidos" />
-      <Painel valor="ooo" nome="Denúncias" />
+    <div className="card ">
+      <div className="card-header">
+        <h5 className="card-title">
+          <Painel valor="ooo" nome="Denúncias até momento" />
+        </h5>
+      </div>
+
       <Link to="/Denuncia">
         <Botao nome="Reportar" />
       </Link>

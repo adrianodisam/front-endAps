@@ -1,16 +1,14 @@
 import React from 'react';
-import styles from './botao.module.css';
+import style from './Botao.module.css';
 
 const Botao = (props) => {
   return (
-    <div className={styles.divBut}>
-      <button
-        className="btn btn-lightbg-success
-        text-dark col-7"
-      >
-        {props.nome}
-      </button>
-    </div>
+    <button
+      className="btn btn-outline-success
+       col-7 Butao "
+    >
+      {props.nome}
+    </button>
   );
 };
 export default Botao;

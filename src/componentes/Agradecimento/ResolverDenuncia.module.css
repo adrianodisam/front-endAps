@@ -10,13 +10,7 @@
   font-size: 30px;
   font-weight: bold;
   margin: 10px;
-  -webkit-animation-name: pulse;
-  animation-name: pulse;
-  -webkit-animation-duration: 1s;
-  animation-duration: 3s;
-  -webkit-animation-fill-mode: both;
-  animation-iteration-count: infinite;
-  animation-fill-mode: both;
+  animation: pulse 5s infinite both;
 }
 @-webkit-keyframes pulse {
   0% {

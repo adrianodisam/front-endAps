@@ -17,8 +17,8 @@ h5,
 p,
 btn {
   color: black;
+  max-width: 200px;
 }
-
 @-webkit-keyframes fadeInLeftBig {
   0% {
     opacity: 0;

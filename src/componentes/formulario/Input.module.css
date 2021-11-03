@@ -5,18 +5,15 @@
   padding-bottom: 0.5 rem;
   color: #3cb371;
 }
-.select {
-  border: 1px solid #90ee90;
+.Input {
+  border: 1px solid #3cb371;
   display: block;
   transition: 0.2s;
-  width: 180px;
   margin: 10px;
-  color: #3cb371;
 }
-.select:focus,
-.select:hover {
+.Input:focus,
+.Input:hover {
   outline: none;
-
   border-color: #3cb371;
   background: white;
   box-shadow: 0 0 0 3px #3cb371;

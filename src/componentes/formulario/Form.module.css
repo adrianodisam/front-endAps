@@ -6,22 +6,15 @@
   color: whitesmoke;
 }
 .formForm button {
-  border: solid 1px #90ee90;
+  border: solid 1px #3cb371;
   margin-top: 2px;
 }
 form {
-  animation: text-focus-in 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  border: solid 1px #90ee90;
+  animation: text-focus-in 1s both;
+  border: solid 1px #3cb371;
   padding: 20px;
   border-radius: 7%;
   margin-top: 4px;
-}
-.formLabel {
-  display: flex;
-
-  align-items: center;
-  color: black;
-  font-weight: bolder;
 }
 
 @-webkit-keyframes text-focus-in {

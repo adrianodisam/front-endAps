@@ -1,46 +1,18 @@
 import React from 'react';
 import Style from './Form.module.css';
 import { Redirect } from 'react-router-dom';
-const formFilds = [
-  {
-    id: 'nome',
-    label: 'nome',
-    type: 'text',
-  },
-  {
-    id: 'email',
-    label: 'email',
-    type: 'email',
-  },
-  {
-    id: 'rua',
-    label: 'rua',
-    type: 'text',
-  },
-  {
-    id: 'problema',
-    label: 'problema',
-    type: 'text',
-  },
-  {
-    id: 'cidade',
-    label: 'cidade',
-    type: 'text',
-  },
-  {
-    id: 'descricao',
-    label: 'Descrição',
-    type: 'textarea',
-  },
-];
+import { Input } from './Input';
+import { Button } from './Button';
+import { TextArea } from './TextArea';
+import { Select } from './Select';
 
 export const Form = () => {
-  const [form, setForm] = React.useState({});
   const [response, setResponse] = React.useState(null);
-  function handlechange({ target }) {
-    const { id, value } = target;
-    setForm({ ...form, [id]: value });
-  }
+  const [nome, setNome] = React.useState('');
+  const [rua, setRua] = React.useState('');
+  const [cidade, setCidade] = React.useState('');
+  const [descricao, setDescricao] = React.useState('');
+  const [problema, setProblema] = React.useState('');
 
   function handleSubmit(event) {
     event.preventDefault();
@@ -49,33 +21,47 @@ export const Form = () => {
       headers: {
         'Content-type': 'application/json',
       },
-      body: JSON.stringify(form),
+      body: JSON.stringify({ nome, rua, cidade, descricao, problema }),
     }).then((response) => setResponse(response));
   }
+  console.log(descricao);
   return (
     <form onSubmit={handleSubmit} className={Style.formForm}>
-      {formFilds.map(({ id, label, type }) => (
-        <div key={id}>
-          <label className={Style.formLabel} htmlFor={id}>
-            {label}
-          </label>
+      <Input
+        label="Nome"
+        id="nome"
+        name="nome"
+        type="text"
+        onChange={({ target }) => setNome(target.value)}
+      />
 
-          <input
-            className={Style.inputForm}
-            type={type}
-            id={id}
-            value={form[id]}
-            onChange={handlechange}
-          />
-        </div>
-      ))}
+      <Input
+        label="Cidade"
+        id="cidade"
+        name="cidade"
+        type="text"
+        onChange={({ target }) => setCidade(target.value)}
+      />
+      <Input
+        label="Rua"
+        id="rua"
+        name="rua"
+        type="text"
+        onChange={({ target }) => setRua(target.value)}
+      />
+      <Select
+        onChange={({ target }) => setProblema(target.value)}
+        name="problema"
+      />
+      <TextArea
+        name="descricao"
+        label="Descrição"
+        onChange={({ target }) => setDescricao(target.value)}
+      />
+
       {response && response.ok && <Redirect to="/Resolver" />}
-      <button
-        className="btn btn-lightbg-success
-        text-dark col-6"
-      >
-        Enviar
-      </button>
+
+      <Button className="menu">Enviar</Button>
     </form>
   );
 };

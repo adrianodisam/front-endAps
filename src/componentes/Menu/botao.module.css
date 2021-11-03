@@ -2,9 +2,14 @@
   display: inline-block;
   position: relative;
   left: 20%;
-  border: solid 1px #90ee90;
+  border: solid 1px #3cb371;
   font-weight: bolder;
-  margin-top: 1px;
+  transition: 0.7s;
+  margin-top: 1rem;
+}
+button:hover {
+  background: #3cb371;
+  box-shadow: 5px 3px 15px 2px #90ee90;
 }
 @media (max-width: 480px) {
   .divBut {

@@ -1,37 +1,28 @@
 import React from 'react';
-import Style from './Select.module.css';
-const Select = () => {
-  const [select, setSelect] = React.useState('select');
+import styles from './Select.module.css';
+
+export const Select = ({ onChange, name }) => {
   return (
     <div>
-      {' '}
-      <label className={Style.label} htmlFor="">
-        Problema
+      <label className={styles.label} htmlFor="name">
+        {name}
       </label>
       <select
-        className={Style.select}
-        value={select}
-        onChange={({ target }) => setSelect(target.value)}
+        className={styles.select}
+        name="problema"
         id="problema"
+        onChange={onChange}
+        required
       >
-        <option disable value="">
-          Selecione
+        <option className="option" value="">
+          Selecione uma opção
         </option>
-        <option className={Style.option} value="Lixo">
-          Lixo
-        </option>
-        <option className={Style.option} value="Desmatamento">
-          Desmatamento
-        </option>
-        <option className={Style.option} value="Queimadas">
+        <option value="Lixo">Lixo</option>
+        <option value="Água">Água</option>
+        <option className="option" value="Queimadas">
           Queimadas
-        </option>
-        <option className={Style.option} value="Vazamento">
-          Vazamento
         </option>
       </select>
     </div>
   );
 };
-
-export default Select;

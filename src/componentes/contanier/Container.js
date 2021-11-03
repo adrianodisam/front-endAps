@@ -7,33 +7,39 @@ import Resolver from '../../routes/Resolver';
 import Nenhuma from '../../routes/Nenhuma';
 import EditarDenuncia from '../../routes/EditarDenuncia';
 import Resolvido from '../../routes/Resolvido';
+import { GlobalStorage } from '../GlobalContext/GlobalContext';
+import Header from '../Menu/Header';
 
 const Container = () => {
   return (
-    <Router>
-      <div className={styles.container}>
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
+    <GlobalStorage>
+      <Router>
+        {' '}
+        <Header />
+        <div className={styles.container}>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
 
-          <Route exact path="/Editar">
-            <EditarDenuncia />
-          </Route>
-          <Route exact path="/denuncia">
-            <Denuncia />
-          </Route>
+            <Route exact path="/Editar">
+              <EditarDenuncia />
+            </Route>
+            <Route exact path="/denuncia">
+              <Denuncia />
+            </Route>
 
-          <Route exact path="/Agradecimento" component={Resolvido} />
-          <Route exact path="/resolver">
-            <Resolver />
-          </Route>
-          <Route exact path="*">
-            <Nenhuma />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
+            <Route exact path="/Agradecimento" component={Resolvido} />
+            <Route exact path="/resolver">
+              <Resolver />
+            </Route>
+            <Route exact path="*">
+              <Nenhuma />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
+    </GlobalStorage>
   );
 };
 

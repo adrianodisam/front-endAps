@@ -1,35 +1,35 @@
 .Painel {
   display: flex;
-  background-color: #90ee90;
+  background-color: #3cb371;
   color: black;
   width: 200px;
-  margin: 10px;
+  padding: 10px;
   font-size: 12px;
   animation: interacao 2s forwards;
   align-items: center;
   border-radius: 20px 0px 20px 0px;
   -webkit-box-shadow: 5px 3px 15px 2px #90ee90;
-  box-shadow: 5px 3px 15px 2px #90ee90;
+  box-shadow: 5px 3px 15px 2px #3cb371;
   -webkit-animation-name: fadeInLeftBig;
   animation-name: fadeInLeftBig;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  color: white;
 }
 .Texto {
   width: 100px;
-  color: black;
+  color: white;
 }
 
 @media (max-width: 480px) {
   .Painel {
-    margin: 10px auto;
-    width: 250px;
+    width: 200px;
     height: 100px;
   }
   .Texto {
-    margin: 50px;
+    margin: 20px;
   }
 }
 

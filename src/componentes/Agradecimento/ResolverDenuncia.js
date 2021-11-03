@@ -10,7 +10,7 @@ const ResolverDenuncia = () => {
   return (
     <div className={styles.container}>
       <h1 className={styles.h1}>
-        " Obrigada por ajudar a dimunuir <br /> nossos probelmas Ambientais"
+        " Obrigada por ajudar a dimunuir <br /> nossos problemas Ambientais"
       </h1>
       <img src={imagen} alt="pessoas" className={styles.img} />
 
